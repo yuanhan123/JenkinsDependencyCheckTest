@@ -11,6 +11,7 @@ pipeline {
 		stage('OWASP DependencyCheck') {
 			steps {//suppression = ignore vulnerabililes)
 				dependencyCheck additionalArguments: '--format HTML --format XML --suppression suppression.xml', odcInstallation: 'OWASP Dependency-Check Vulnerabilities'
+																			#name of ur pipeline
 			}
 		}
 	}	
